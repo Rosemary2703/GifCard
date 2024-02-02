@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .book >p{
+            font-size: 30px;
+            text-align: center;
+        }
+        .cover > div >p {
+            font-size: 40px;
+        }
+        @keyframes moveUp {
+            0% {
+                transform: translateY(100%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+        .moving-gif-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: moveUp 5s linear infinite;
+        }
+        .moving-gif-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation: moveUp 5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <img src="gif_02.gif" class="moving-gif-left"> 
+    <img src="gif_02.gif" class="moving-gif-right">
+    <div class="container">
+        <div class="book">
+            <p>    ¡Happy Birthday Sweetheart! </p>
+            <div class="cover">
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p>Hello</p>
+                    <img src="gif_cat.gif" style="width: 90%; height: auto; margin-top: 60px;">
+                </div>
+            </div>
+        </div>
+        <button id="confeti" class="mt-4 btn btn-dark">Party! 🎉</button>
+        <br>
+        <audio controls>
+            <source src="happy birthday.mp3" type="audio/mpeg">
+        </audio>
+        
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
